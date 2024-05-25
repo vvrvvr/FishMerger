@@ -8892,6 +8892,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 1.1478376
       objectReference: {fileID: 0}
+    - target: {fileID: 6652171698058016159, guid: 229c107096dfaf54ba05c5551537ea30, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7396255682521089355, guid: 229c107096dfaf54ba05c5551537ea30, type: 3}
       propertyPath: m_Name
       value: Essentials
