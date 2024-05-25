@@ -349,6 +349,10 @@ PrefabInstance:
       propertyPath: forceSlider
       value: 
       objectReference: {fileID: 5776806113231187915}
+    - target: {fileID: 8270935961775237540, guid: 89c43bc61e674f3419dda2c79e6b6924, type: 3}
+      propertyPath: impulseDirection.x
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
