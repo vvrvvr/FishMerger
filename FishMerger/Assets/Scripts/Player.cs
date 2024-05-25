@@ -35,18 +35,18 @@ public class Player : MonoBehaviour
         }
         Changecolor(isGrounded);
 
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            Push(new Vector3(10, 5,0));
-        }
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            DeactivateRb();
-        }
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            ActivateRb();
-        }
+        // if (Input.GetKeyDown(KeyCode.A))
+        // {
+        //     Push(new Vector3(10, 5,0));
+        // }
+        // if (Input.GetKeyDown(KeyCode.D))
+        // {
+        //     DeactivateRb();
+        // }
+        // if (Input.GetKeyDown(KeyCode.W))
+        // {
+        //     ActivateRb();
+        // }
     }
 
     public void Push(Vector3 force)

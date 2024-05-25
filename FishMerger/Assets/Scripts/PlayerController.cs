@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        bool isGrounded = player.isGrounded;
         if (Input.GetKeyDown(KeyCode.Space))
         {
             isPressing = true;
@@ -39,7 +40,8 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Space))
         {
             isPressing = false;
-            player.Push(impulseDirection * currentForce);
+            if(isGrounded)
+                player.Push(impulseDirection * currentForce);
             currentForce = impulseForceMin;
             forceSlider.SetForce(currentForce);
         }

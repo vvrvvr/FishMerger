@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9bf7462b-a2ab-4a3d-b175-0943aa6cdae6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FishMerger/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FishMerger/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Controller sandbox.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Controller sandbox.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -98,7 +98,7 @@
       <updated>1716624102545</updated>
       <workItem from="1716624104862" duration="863000" />
       <workItem from="1716627498509" duration="3776000" />
-      <workItem from="1716633529012" duration="1109000" />
+      <workItem from="1716633529012" duration="1854000" />
     </task>
     <task id="LOCAL-00001" summary="инишал 2">
       <created>1716624336402</created>
