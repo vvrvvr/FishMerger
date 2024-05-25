@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     public float impulseForceMax = 10f;
     public float forceTime = 4f;
 
-    private Vector3 impulseDirection = new Vector3(1, 1, 0);
+    public Vector3 impulseDirection = new Vector3(1, 1, 0);
     private bool isPressing = false;
     private float pressStartTime;
     public Player player;
