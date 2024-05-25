@@ -2,19 +2,25 @@ using UnityEngine;
 
 public class Chaser : MonoBehaviour
 {
+    // Переменные для движения рыбака
     public float fishermanSpeed = 5f;
-    public float fishermanmaxSpeed = 10f;
+    public float fishermanMaxSpeed = 10f;
     public float accelerationTime = 1f;
     public float maxDistanceToFish = 5f;
-
     public Vector3 direction = Vector3.forward;
     public bool isChasing = true;
     public Transform fish;
 
+    // Переменные для анимации и ловли рыбы
+    public Animator animator;
+    public FishermanHand fishermanHand;
+
+    // Приватные переменные
     private float currentSpeed;
     private float targetSpeed;
     private float speedChangeRate;
     private bool wasBeyondMaxDistance;
+    private bool isOnCooldown = false;
 
     void Start()
     {
@@ -30,23 +36,21 @@ public class Chaser : MonoBehaviour
 
             if (distanceToFish > maxDistanceToFish)
             {
-                targetSpeed = fishermanmaxSpeed;
-                speedChangeRate = (fishermanmaxSpeed - fishermanSpeed) / accelerationTime;
+                targetSpeed = fishermanMaxSpeed;
+                speedChangeRate = (fishermanMaxSpeed - fishermanSpeed) / accelerationTime;
 
                 if (!wasBeyondMaxDistance)
                 {
-                    Debug.Log("Distance to fish is greater than the maximum allowed.");
                     wasBeyondMaxDistance = true;
                 }
             }
             else
             {
                 targetSpeed = fishermanSpeed;
-                speedChangeRate = (fishermanmaxSpeed - fishermanSpeed) / (accelerationTime / 2);
+                speedChangeRate = (fishermanMaxSpeed - fishermanSpeed) / (accelerationTime / 2);
 
                 if (wasBeyondMaxDistance)
                 {
-                    Debug.Log("Distance to fish is within the allowed range.");
                     wasBeyondMaxDistance = false;
                 }
             }
@@ -55,6 +59,39 @@ public class Chaser : MonoBehaviour
             Vector3 normalizedDirection = direction.normalized;
             Vector3 newPosition = transform.position + normalizedDirection * currentSpeed * Time.deltaTime;
             transform.position = newPosition;
+        }
+        
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            CatchFish();
+        }
+    }
+
+    public void CatchFish()
+    {
+        if (animator != null)
+        {
+            animator.SetBool("isCrouch", true);
+        }
+        PlayerController.Instance.CatchFish();
+        fishermanHand.CatchFish();
+        isChasing = false;
+
+        // Проверяем расстояние до рыбы и перемещаемся по оси X, если нужно
+        float distanceToFish = Vector3.Distance(transform.position, fish.position);
+        if (distanceToFish > 0.7f)
+        {
+            Debug.Log("sdfsdfsdfsdf");
+            float moveDirection = Mathf.Sign(fish.position.x - transform.position.x);
+            transform.position += new Vector3(-moveDirection * (0.7f - distanceToFish), 0f, 0f);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (!isOnCooldown && other.CompareTag("Player"))
+        {
+            CatchFish();
         }
     }
 }
