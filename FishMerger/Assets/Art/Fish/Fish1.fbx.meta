@@ -3,7 +3,12 @@ guid: f0282e79f0c3cdb40af2c4a94622fee1
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mugil_M
+    second: {fileID: 2100000, guid: 62228dcd90255b94485b5ac9e5eb5244, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
