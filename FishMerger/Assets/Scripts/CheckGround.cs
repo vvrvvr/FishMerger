@@ -10,7 +10,7 @@ public class CheckGround : MonoBehaviour
         if (other.CompareTag("ground"))
         {
             isground = true;
-            Debug.Log("ground");
+            //Debug.Log("ground");
         }
     }
     private void OnTriggerExit(Collider other)

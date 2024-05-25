@@ -1,8 +1,11 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController Instance { get; private set; }
+
     public float impulseForceMin = 1f;
     public float impulseForceMax = 10f;
     public float forceTime = 4f;
@@ -14,6 +17,24 @@ public class PlayerController : MonoBehaviour
     public HealthBar forceSlider;
 
     private float currentForce = 0f;
+    
+    public Vector3 lastGoodPosition;
+    public float spawnOffsetX = 1f;
+    public float spawnOffsetY = 1f;
+    public Transform testCube;
+    public float spawnCooldown = 1f;
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else if (Instance != this)
+        {
+            Destroy(gameObject); // Уничтожить новый экземпляр, если синглтон уже существует
+        }
+    }
 
     public void Start()
     {
@@ -40,10 +61,29 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Space))
         {
             isPressing = false;
-            if(isGrounded)
+            if (isGrounded)
+            {
                 player.Push(impulseDirection * currentForce);
+                lastGoodPosition = player.pos;
+                testCube.position = lastGoodPosition;
+            }
+            
             currentForce = impulseForceMin;
             forceSlider.SetForce(currentForce);
         }
+    }
+
+    public void RespawnToNearPoint()
+    {
+        StartCoroutine(CooldownRoutine());
+        player.gameObject.transform.position = new Vector3(lastGoodPosition.x-spawnOffsetX, lastGoodPosition.y+spawnOffsetY, lastGoodPosition.z);
+        
+    }
+    
+    private IEnumerator CooldownRoutine()
+    {
+        player.DeactivateRb();
+        yield return new WaitForSeconds(spawnCooldown);
+        player.ActivateRb();
     }
 }
