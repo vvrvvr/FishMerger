@@ -9,7 +9,10 @@ public class PlayerController : MonoBehaviour
     public float impulseForceMin = 1f;
     public float impulseForceMax = 10f;
     public float forceTime = 4f;
-
+    public AudioSource audio;
+    public AudioClip winmusic;
+    public AudioClip lostmusic;
+    
     public Vector3 impulseDirection = new Vector3(1, 1, 0);
     private bool isPressing = false;
     private float pressStartTime;
@@ -76,6 +79,7 @@ public class PlayerController : MonoBehaviour
         Instantiate(MugilWin, player.transform.position, Quaternion.identity );
         chaser.StopChase();
         StartCoroutine(WinRoutine());
+        audio.PlayOneShot(winmusic);
     }
 
     void Update()
@@ -165,6 +169,7 @@ public class PlayerController : MonoBehaviour
         player.DeactivateRb();
         ForceSlider.SetActive(false);
         StartCoroutine(DeathRoutine());
+        audio.PlayOneShot(lostmusic);
     }
     private IEnumerator DeathRoutine()
     {

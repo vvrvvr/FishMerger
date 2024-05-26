@@ -1571,21 +1571,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1658186127495874131}
     m_Modifications:
-    - target: {fileID: 1034998984945857823, guid: 89c43bc61e674f3419dda2c79e6b6924, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1066361512539367534, guid: 89c43bc61e674f3419dda2c79e6b6924, type: 3}
       propertyPath: m_Name
       value: PlayerController
-      objectReference: {fileID: 0}
-    - target: {fileID: 2396709061558294324, guid: 89c43bc61e674f3419dda2c79e6b6924, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2396709061558294324, guid: 89c43bc61e674f3419dda2c79e6b6924, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2396709061558294324, guid: 89c43bc61e674f3419dda2c79e6b6924, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1627,10 +1615,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7047327357044247902, guid: 89c43bc61e674f3419dda2c79e6b6924, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8270935961775237540, guid: 89c43bc61e674f3419dda2c79e6b6924, type: 3}
       propertyPath: chaser
       value: 
@@ -1639,10 +1623,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 5160913336095891470}
-    - target: {fileID: 8270935961775237540, guid: 89c43bc61e674f3419dda2c79e6b6924, type: 3}
-      propertyPath: MugilWin
-      value: 
-      objectReference: {fileID: 9146149794829566996, guid: 91f86e596a0c78c419016451072d9230, type: 3}
     - target: {fileID: 8270935961775237540, guid: 89c43bc61e674f3419dda2c79e6b6924, type: 3}
       propertyPath: testCube
       value: 
@@ -1679,28 +1659,6 @@ PrefabInstance:
       propertyPath: winCharacterPanel
       value: 
       objectReference: {fileID: 3383327666209010508}
-    - target: {fileID: 8270935961775237540, guid: 89c43bc61e674f3419dda2c79e6b6924, type: 3}
-      propertyPath: impulseDirection.x
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 8270935961775237540, guid: 89c43bc61e674f3419dda2c79e6b6924, type: 3}
-      propertyPath: deathPhrases.Array.data[0]
-      value: "\u0423\u0432\u044B! \u0416\u0430\u0434\u043D\u043E\u0441\u0442\u044C
-        \u0438 \u0433\u043E\u043B\u043E\u0434 \u043E\u0434\u0435\u0440\u0436\u0430\u043B\u0438
-        \u0432\u0435\u0440\u0445 \u043D\u0430\u0434 \u0441\u0442\u0440\u0435\u043C\u043B\u0435\u043D\u0438\u0435\u043C
-        \u043A \u0441\u0432\u043E\u0431\u043E\u0434\u0435."
-      objectReference: {fileID: 0}
-    - target: {fileID: 8270935961775237540, guid: 89c43bc61e674f3419dda2c79e6b6924, type: 3}
-      propertyPath: deathPhrases.Array.data[1]
-      value: "\u0435\u0449\u0435 \u043E\u0434\u043D\u0430 \u043F\u043E\u0442\u0435\u0440\u044F\u043D\u043D\u0430\u044F
-        \u0434\u0443\u0448\u0430!"
-      objectReference: {fileID: 0}
-    - target: {fileID: 8270935961775237540, guid: 89c43bc61e674f3419dda2c79e6b6924, type: 3}
-      propertyPath: deathPhrases.Array.data[2]
-      value: "\u042F \u043D\u0435 \u0437\u0430\u0431\u0443\u0434\u0443 \u0435\u0451!
-        \u041A\u0430\u043A \u0438 \u0432\u0441\u0435\u0445 \u0434\u043E \u043D\u0435\u0451.
-        \u041A\u0430\u043A \u0438 \u0432\u0441\u0435\u0445 \u043F\u043E\u0441\u043B\u0435."
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
