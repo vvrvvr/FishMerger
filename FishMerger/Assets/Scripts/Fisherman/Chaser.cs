@@ -77,35 +77,31 @@ public class Chaser : MonoBehaviour
     {
         if (isCatch)
             return;
-        // Проверяем расстояние до рыбы и перемещаемся по оси X, если нужно
+        
         float distanceToFish = Vector3.Distance(transform.position, fish.position);
         Debug.Log(distanceToFish);
         if (distanceToFish > 0.7f)
         {
-            if (distanceToFish > safeDistanceToCatchFish)
+            if (distanceToFish > safeDistanceToCatchFish) //здесь рыба прыгнула очень далеко и мы даём шанс ещё раз прыгнуть
             {
                 float moveDirection = Mathf.Sign(fish.position.x - transform.position.x);
                 transform.position += new Vector3(-moveDirection * (0.7f - distanceToFish-6), 0f, 0f);
                 return;
             }
-            else
+            else //здесь мы поймали рыбу
             {
                 float moveDirection = Mathf.Sign(fish.position.x - transform.position.x);
                 transform.position += new Vector3(-moveDirection * (0.7f - distanceToFish), 0f, 0f);
+                if (animator != null)
+                {
+                    animator.SetBool("isCrouch", true);
+                }
+                PlayerController.Instance.CatchFish();
+                fishermanHand.CatchFish();
+                isChasing = false;
                 isCatch = true;
             }
-            
         }
-        
-        if (animator != null)
-        {
-            animator.SetBool("isCrouch", true);
-        }
-        PlayerController.Instance.CatchFish();
-        fishermanHand.CatchFish();
-        isChasing = false;
-
-       
     }
 
     private void OnTriggerEnter(Collider other)
@@ -113,7 +109,7 @@ public class Chaser : MonoBehaviour
         if (!isOnCooldown && other.CompareTag("Player"))
         {
             CheckAndCatchFish();
-            StartCoroutine(CooldownRoutine());
+            StartCoroutine(CooldownRoutine()); //корутина чтобы метод ловли не срабатывал на каждый коллайдер рыбы
         }
     }
     
