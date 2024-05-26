@@ -119,6 +119,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Death Zone
       objectReference: {fileID: 0}
+    - target: {fileID: 3958439744523639992, guid: 9443fddad3eebe047bfd210db71b681f, type: 3}
+      propertyPath: effect
+      value: 
+      objectReference: {fileID: 100000, guid: 83cd9cc9f9c88824ba18dc59b05ae328, type: 3}
     - target: {fileID: 4832657914265969749, guid: 9443fddad3eebe047bfd210db71b681f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.687
