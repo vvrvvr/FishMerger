@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     private float pressStartTime;
     public Player player;
     public HealthBar forceSlider;
+    public bool hasControl = true;
 
     private float currentForce = 0f;
     
@@ -44,33 +45,37 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         bool isGrounded = player.isGrounded;
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (hasControl)
         {
-            isPressing = true;
-            pressStartTime = Time.time;
-        }
-
-        if (isPressing && Input.GetKey(KeyCode.Space))
-        {
-            float heldTime = Time.time - pressStartTime;
-            float t = Mathf.Clamp01(heldTime / forceTime);
-            currentForce = Mathf.Lerp(impulseForceMin, impulseForceMax, t);
-            forceSlider.SetForce(currentForce);
-        }
-
-        if (Input.GetKeyUp(KeyCode.Space))
-        {
-            isPressing = false;
-            if (isGrounded)
+            if (Input.GetKeyDown(KeyCode.Space))
             {
-                player.Push(impulseDirection * currentForce);
-                lastGoodPosition = player.pos;
-                testCube.position = lastGoodPosition;
+                isPressing = true;
+                pressStartTime = Time.time;
             }
+
+            if (isPressing && Input.GetKey(KeyCode.Space))
+            {
+                float heldTime = Time.time - pressStartTime;
+                float t = Mathf.Clamp01(heldTime / forceTime);
+                currentForce = Mathf.Lerp(impulseForceMin, impulseForceMax, t);
+                forceSlider.SetForce(currentForce);
+            }
+
+            if (Input.GetKeyUp(KeyCode.Space))
+            {
+                isPressing = false;
+                if (isGrounded)
+                {
+                    player.Push(impulseDirection * currentForce);
+                    lastGoodPosition = player.pos;
+                    testCube.position = lastGoodPosition;
+                }
             
-            currentForce = impulseForceMin;
-            forceSlider.SetForce(currentForce);
+                currentForce = impulseForceMin;
+                forceSlider.SetForce(currentForce);
+            } 
         }
+        
     }
 
     public void RespawnToNearPoint()
@@ -85,5 +90,11 @@ public class PlayerController : MonoBehaviour
         player.DeactivateRb();
         yield return new WaitForSeconds(spawnCooldown);
         player.ActivateRb();
+    }
+
+    public void CatchFish()
+    {
+        hasControl = false;
+        player.DeactivateRb();
     }
 }
