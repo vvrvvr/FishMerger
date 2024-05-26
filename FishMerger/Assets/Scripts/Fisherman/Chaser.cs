@@ -103,12 +103,14 @@ public class Chaser : MonoBehaviour
         {
             if (distanceToFish > safeDistanceToCatchFish) //здесь рыба прыгнула очень далеко и мы даём шанс ещё раз прыгнуть
             {
+                Debug.Log("раз");
                 float moveDirection = Mathf.Sign(fish.position.x - transform.position.x);
                 transform.position += new Vector3(-moveDirection * (0.7f - distanceToFish-6), 0f, 0f);
                 return;
             }
             else //здесь мы поймали рыбу
             {
+                Debug.Log("два");
                 float moveDirection = Mathf.Sign(fish.position.x - transform.position.x);
                 transform.position += new Vector3(-moveDirection * (0.7f - distanceToFish), 0f, 0f);
                 if (animator != null)
@@ -123,6 +125,7 @@ public class Chaser : MonoBehaviour
         }
         else //здесь мы поймали рыбу
         {
+            Debug.Log("три");
             float moveDirection = Mathf.Sign(fish.position.x - transform.position.x);
             transform.position += new Vector3(-moveDirection * (0.7f - distanceToFish), 0f, 0f);
             if (animator != null)
