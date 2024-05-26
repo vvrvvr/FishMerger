@@ -98,6 +98,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 64625061289920996, guid: 14fccbae209fdf64bbe5c99774a871e7, type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -189,18 +193,6 @@ PrefabInstance:
     - target: {fileID: 1523150683153448689, guid: 5a8e84a0940f9794590e838276d03b43, type: 3}
       propertyPath: m_Name
       value: Basic_Lava
-      objectReference: {fileID: 0}
-    - target: {fileID: 3645491726144842498, guid: 5a8e84a0940f9794590e838276d03b43, type: 3}
-      propertyPath: m_Size.y
-      value: 1.4099308
-      objectReference: {fileID: 0}
-    - target: {fileID: 3645491726144842498, guid: 5a8e84a0940f9794590e838276d03b43, type: 3}
-      propertyPath: m_Center.y
-      value: 0.68530196
-      objectReference: {fileID: 0}
-    - target: {fileID: 5531497492412379078, guid: 5a8e84a0940f9794590e838276d03b43, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7829281031221457793, guid: 5a8e84a0940f9794590e838276d03b43, type: 3}
       propertyPath: m_LocalPosition.x
