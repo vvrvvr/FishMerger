@@ -27,6 +27,7 @@ public class Chaser : MonoBehaviour
 
     private bool isCatch = false;
     
+    
 
     void Start()
     {
@@ -115,6 +116,19 @@ public class Chaser : MonoBehaviour
                 isChasing = false;
                 isCatch = true;
             }
+        }
+        else
+        {
+            float moveDirection = Mathf.Sign(fish.position.x - transform.position.x);
+            transform.position += new Vector3(-moveDirection * (0.7f - distanceToFish), 0f, 0f);
+            if (animator != null)
+            {
+                animator.SetBool("isCrouch", true);
+            }
+            PlayerController.Instance.CatchFish();
+            fishermanHand.CatchFish();
+            isChasing = false;
+            isCatch = true;
         }
     }
 

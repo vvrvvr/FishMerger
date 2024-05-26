@@ -1317,6 +1317,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1065340148972393994, guid: e46fbc68a61729d4694325de380714bd, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1065340148972393994, guid: e46fbc68a61729d4694325de380714bd, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1065340148972393994, guid: e46fbc68a61729d4694325de380714bd, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 122.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1065340148972393994, guid: e46fbc68a61729d4694325de380714bd, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 61.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1065340148972393994, guid: e46fbc68a61729d4694325de380714bd, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -25
+      objectReference: {fileID: 0}
     - target: {fileID: 1359284162266963110, guid: e46fbc68a61729d4694325de380714bd, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -24.788818
@@ -1332,6 +1352,18 @@ PrefabInstance:
     - target: {fileID: 3421800219400342553, guid: e46fbc68a61729d4694325de380714bd, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -24.788818
+      objectReference: {fileID: 0}
+    - target: {fileID: 3685384848028470286, guid: e46fbc68a61729d4694325de380714bd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4047751196161103914, guid: e46fbc68a61729d4694325de380714bd, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 122.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4047751196161103914, guid: e46fbc68a61729d4694325de380714bd, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 5682661989920918471, guid: e46fbc68a61729d4694325de380714bd, type: 3}
       propertyPath: m_UiScaleMode
