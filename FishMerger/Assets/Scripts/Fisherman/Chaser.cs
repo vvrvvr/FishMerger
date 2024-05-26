@@ -60,7 +60,7 @@ public class Chaser : MonoBehaviour
         if (isChasing && fish != null)
         {
             float distanceToFish =  fish.position.x - transform.position.x;
-            Debug.Log(distanceToFish);
+//            Debug.Log(distanceToFish);
             if (distanceToFish > maxDistanceToFish)
             {
                 targetSpeed = fishermanMaxSpeed;

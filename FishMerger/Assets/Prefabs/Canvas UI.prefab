@@ -223,15 +223,15 @@ RectTransform:
   m_GameObject: {fileID: 614464108898612924}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6900965748959489447}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 448, y: 156}
-  m_SizeDelta: {x: 351.4082, y: 343.3695}
+  m_AnchoredPosition: {x: 345, y: 204}
+  m_SizeDelta: {x: 648, y: 865}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5735574009284913801
 CanvasRenderer:
@@ -261,7 +261,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ad645c8fe45e540ce915cc4da2c36cc5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6805b63b3d60ba44b883da2b1b3c98bc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -959,7 +959,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.05758016}
   m_AnchorMax: {x: 0.96748555, y: 0.29519087}
-  m_AnchoredPosition: {x: 344.80078, y: -45.82074}
+  m_AnchoredPosition: {x: 271.80078, y: -45.82074}
   m_SizeDelta: {x: -680.2305, y: -86.5021}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7744482884507092902
@@ -1292,7 +1292,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.05758016}
   m_AnchorMax: {x: 0.96748555, y: 0.29519087}
-  m_AnchoredPosition: {x: 344.80078, y: -45.82074}
+  m_AnchoredPosition: {x: 248, y: -45.82074}
   m_SizeDelta: {x: -680.2305, y: -86.5021}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3573548557454086015
@@ -2372,15 +2372,15 @@ RectTransform:
   m_GameObject: {fileID: 8801196971850736860}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7401537180249821185}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 448, y: 156}
-  m_SizeDelta: {x: 351.4082, y: 343.3695}
+  m_AnchoredPosition: {x: 364, y: 186}
+  m_SizeDelta: {x: 648, y: 865}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2914437377677895244
 CanvasRenderer:
@@ -2410,7 +2410,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ad645c8fe45e540ce915cc4da2c36cc5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6805b63b3d60ba44b883da2b1b3c98bc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

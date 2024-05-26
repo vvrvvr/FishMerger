@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -13,6 +11,14 @@ public class Tooltip : MonoBehaviour
     private void Start()
     {
         tooltip.SetActive(false);
+    }
+
+    public void Update()
+    {
+        if (!PlayerController.Instance.hasControl)
+        {
+            tooltip.SetActive(false);
+        }
     }
 
     void OnTriggerEnter(Collider other)

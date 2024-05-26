@@ -321,30 +321,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas UI
       objectReference: {fileID: 0}
-    - target: {fileID: 5588056776561320661, guid: be2db36773d0aa6469f4bb421617bffc, type: 3}
-      propertyPath: m_text
-      value: "\u0442\u0443\u0442 \u0444\u0444\u0446\u0444\u0432\u0432\u0430\u0444\u044B\u0444\u0444\u044B\u0440\u0430\u0437\u0430"
-      objectReference: {fileID: 0}
-    - target: {fileID: 5588056776561320661, guid: be2db36773d0aa6469f4bb421617bffc, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: c1482dbce654844b9ba1c753cbea5d80, type: 2}
-    - target: {fileID: 5588056776561320661, guid: be2db36773d0aa6469f4bb421617bffc, type: 3}
-      propertyPath: m_fontStyle
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5588056776561320661, guid: be2db36773d0aa6469f4bb421617bffc, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 7374927986402738804, guid: c1482dbce654844b9ba1c753cbea5d80, type: 2}
-    - target: {fileID: 5588056776561320661, guid: be2db36773d0aa6469f4bb421617bffc, type: 3}
-      propertyPath: m_enableAutoSizing
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5588056776561320661, guid: be2db36773d0aa6469f4bb421617bffc, type: 3}
-      propertyPath: m_hasFontAssetChanged
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6234341267175165030, guid: be2db36773d0aa6469f4bb421617bffc, type: 3}
       propertyPath: m_Pivot.x
       value: 0
