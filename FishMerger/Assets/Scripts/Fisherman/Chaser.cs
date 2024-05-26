@@ -105,7 +105,7 @@ public class Chaser : MonoBehaviour
             {
                 Debug.Log("раз");
                 float moveDirection = Mathf.Sign(fish.position.x - transform.position.x);
-                transform.position = new Vector3(fish.position.x - 10, 0f, 0f);
+                transform.position = new Vector3(fish.position.x - 10, transform.position.y, transform.position.z);
                 return;
             }
             else //здесь мы поймали рыбу

@@ -10,6 +10,7 @@ public class DeathZone : MonoBehaviour
     {
         if (!isOnCooldown && other.CompareTag("Player"))
         {
+            Debug.Log("сработало");
             PlayerController.Instance.RespawnToNearPoint();
             StartCoroutine(CooldownRoutine());
         }
