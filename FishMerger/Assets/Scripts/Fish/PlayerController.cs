@@ -27,6 +27,8 @@ public class PlayerController : MonoBehaviour
     public float spawnCooldown = 1f;
     private bool isStart = true;
 
+    public GameObject startTooltip;
+
 
     private void Awake()
     {
@@ -43,7 +45,7 @@ public class PlayerController : MonoBehaviour
     public void Start()
     {
         forceSlider.SetValues(impulseForceMin, impulseForceMax);
-
+        startTooltip.SetActive(true);
         hasControl = false;
         player.DeactivateRb();
     }
@@ -53,6 +55,7 @@ public class PlayerController : MonoBehaviour
         chaser.StartChase();
         hasControl = true;
         player.ActivateRb();
+        startTooltip.SetActive(false);
     }
 
     public void WinGame()
