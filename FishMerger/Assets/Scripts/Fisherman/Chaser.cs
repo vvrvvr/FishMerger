@@ -47,6 +47,10 @@ public class Chaser : MonoBehaviour
     public void StopChase()
     {
         isChasing = false;
+        if (animator != null)
+        {
+            animator.SetBool("isCrouch", true);
+        }
     }
 
     void Update()
