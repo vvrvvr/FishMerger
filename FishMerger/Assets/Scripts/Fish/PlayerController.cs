@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour
     public AudioSource audio;
     public AudioClip winmusic;
     public AudioClip lostmusic;
+    public AudioClip jumpSound1;
+    public AudioClip jumpSound2;
     
     public Vector3 impulseDirection = new Vector3(1, 1, 0);
     private bool isPressing = false;
@@ -129,6 +131,7 @@ public class PlayerController : MonoBehaviour
                 if (isGrounded)
                 {
                     player.Push(impulseDirection * currentForce);
+                    PlayJumpSound();
                     lastGoodPosition = player.pos;
                     testCube.position = lastGoodPosition;
                 }
@@ -136,6 +139,19 @@ public class PlayerController : MonoBehaviour
                 currentForce = impulseForceMin;
                 forceSlider.SetForce(currentForce);
             }
+        }
+    }
+
+    private void PlayJumpSound()
+    {
+        int randomValue = Random.Range(0, 2);
+        if (randomValue == 0)
+        {
+            audio.PlayOneShot(jumpSound1);
+        }
+        else
+        {
+            audio.PlayOneShot(jumpSound2);
         }
     }
 

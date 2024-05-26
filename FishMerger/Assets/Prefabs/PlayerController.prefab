@@ -125,6 +125,8 @@ MonoBehaviour:
   audio: {fileID: 1886731675111044075}
   winmusic: {fileID: 8300000, guid: cd7be50cd3380db469adc2ff3a1710db, type: 3}
   lostmusic: {fileID: 8300000, guid: f2602c4f7ddfe784383eb40fd6b61eb4, type: 3}
+  jumpSound1: {fileID: 8300000, guid: 12938a9199cf9af4ea7849be4a859ded, type: 3}
+  jumpSound2: {fileID: 8300000, guid: b2ea09af5a4cbc844bd12f10e502d663, type: 3}
   impulseDirection: {x: 0.8, y: 1, z: 0}
   player: {fileID: 0}
   forceSlider: {fileID: 0}
