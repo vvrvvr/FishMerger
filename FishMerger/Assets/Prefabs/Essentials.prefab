@@ -306,6 +306,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0.000017285369
       objectReference: {fileID: 0}
+    - target: {fileID: -5998800701961831071, guid: c1c39d0cd659b524ba9daa3fc4687fcc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -5941654368309505596, guid: c1c39d0cd659b524ba9daa3fc4687fcc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: -3.7870592e-16
@@ -1135,6 +1139,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3304462602393072329}
     - target: {fileID: 5935974672427396546, guid: be7d5a4a32e35e745934c193f18faedc, type: 3}
+      propertyPath: isChasing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5935974672427396546, guid: be7d5a4a32e35e745934c193f18faedc, type: 3}
       propertyPath: fishermanHand
       value: 
       objectReference: {fileID: 5961983889399444502}
@@ -1202,6 +1210,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8581010711837125994, guid: be7d5a4a32e35e745934c193f18faedc, type: 3}
   m_PrefabInstance: {fileID: 4577204582097992718}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7918927742370681292 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5935974672427396546, guid: be7d5a4a32e35e745934c193f18faedc, type: 3}
+  m_PrefabInstance: {fileID: 4577204582097992718}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4aa580ef105b8bf42a0f1472185cbe30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4781136262992858896
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1301,6 +1320,18 @@ PrefabInstance:
     - target: {fileID: 2925414386917432638, guid: e46fbc68a61729d4694325de380714bd, type: 3}
       propertyPath: m_Name
       value: Canvas UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 5682661989920918471, guid: e46fbc68a61729d4694325de380714bd, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5682661989920918471, guid: e46fbc68a61729d4694325de380714bd, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 5682661989920918471, guid: e46fbc68a61729d4694325de380714bd, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1519,6 +1550,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8270935961775237540, guid: 89c43bc61e674f3419dda2c79e6b6924, type: 3}
+      propertyPath: chaser
+      value: 
+      objectReference: {fileID: 7918927742370681292}
     - target: {fileID: 8270935961775237540, guid: 89c43bc61e674f3419dda2c79e6b6924, type: 3}
       propertyPath: player
       value: 

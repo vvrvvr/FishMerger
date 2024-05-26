@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class Chaser : MonoBehaviour
 {
@@ -7,6 +8,8 @@ public class Chaser : MonoBehaviour
     public float fishermanMaxSpeed = 10f;
     public float accelerationTime = 1f;
     public float maxDistanceToFish = 5f;
+    [Space(10)]
+    public float safeDistanceToCatchFish = 3f;
     public Vector3 direction = Vector3.forward;
     public bool isChasing = true;
     public Transform fish;
@@ -22,10 +25,27 @@ public class Chaser : MonoBehaviour
     private bool wasBeyondMaxDistance;
     private bool isOnCooldown = false;
 
+    private bool isCatch = false;
+    
+
     void Start()
     {
         currentSpeed = fishermanSpeed;
         wasBeyondMaxDistance = false;
+
+        isChasing = false;
+        animator.speed = 0;
+    }
+
+    public void StartChase()
+    {
+        animator.speed = 1;
+        isChasing = true;
+    }
+
+    public void StopChase()
+    {
+        isChasing = false;
     }
 
     void Update()
@@ -63,27 +83,38 @@ public class Chaser : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.L))
         {
-            CatchFish();
+            CheckAndCatchFish();
         }
     }
 
-    public void CatchFish()
+    public void CheckAndCatchFish()
     {
-        if (animator != null)
-        {
-            animator.SetBool("isCrouch", true);
-        }
-        PlayerController.Instance.CatchFish();
-        fishermanHand.CatchFish();
-        isChasing = false;
-
-        // Проверяем расстояние до рыбы и перемещаемся по оси X, если нужно
+        if (isCatch)
+            return;
+        
         float distanceToFish = Vector3.Distance(transform.position, fish.position);
+        Debug.Log(distanceToFish);
         if (distanceToFish > 0.7f)
         {
-            Debug.Log("sdfsdfsdfsdf");
-            float moveDirection = Mathf.Sign(fish.position.x - transform.position.x);
-            transform.position += new Vector3(-moveDirection * (0.7f - distanceToFish), 0f, 0f);
+            if (distanceToFish > safeDistanceToCatchFish) //здесь рыба прыгнула очень далеко и мы даём шанс ещё раз прыгнуть
+            {
+                float moveDirection = Mathf.Sign(fish.position.x - transform.position.x);
+                transform.position += new Vector3(-moveDirection * (0.7f - distanceToFish-6), 0f, 0f);
+                return;
+            }
+            else //здесь мы поймали рыбу
+            {
+                float moveDirection = Mathf.Sign(fish.position.x - transform.position.x);
+                transform.position += new Vector3(-moveDirection * (0.7f - distanceToFish), 0f, 0f);
+                if (animator != null)
+                {
+                    animator.SetBool("isCrouch", true);
+                }
+                PlayerController.Instance.CatchFish();
+                fishermanHand.CatchFish();
+                isChasing = false;
+                isCatch = true;
+            }
         }
     }
 
@@ -91,7 +122,15 @@ public class Chaser : MonoBehaviour
     {
         if (!isOnCooldown && other.CompareTag("Player"))
         {
-            CatchFish();
+            CheckAndCatchFish();
+            StartCoroutine(CooldownRoutine()); //корутина чтобы метод ловли не срабатывал на каждый коллайдер рыбы
         }
+    }
+    
+    private IEnumerator CooldownRoutine()
+    {
+        isOnCooldown = true;
+        yield return new WaitForSeconds(0.3f);
+        isOnCooldown = false;
     }
 }

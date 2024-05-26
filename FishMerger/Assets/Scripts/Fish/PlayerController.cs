@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using UnityEngine;
 
@@ -15,15 +14,18 @@ public class PlayerController : MonoBehaviour
     private float pressStartTime;
     public Player player;
     public HealthBar forceSlider;
+    public Chaser chaser;
     public bool hasControl = true;
 
     private float currentForce = 0f;
-    
+
     public Vector3 lastGoodPosition;
     public float spawnOffsetX = 1f;
     public float spawnOffsetY = 1f;
     public Transform testCube;
     public float spawnCooldown = 1f;
+    private bool isStart = true;
+
 
     private void Awake()
     {
@@ -40,9 +42,39 @@ public class PlayerController : MonoBehaviour
     public void Start()
     {
         forceSlider.SetValues(impulseForceMin, impulseForceMax);
+
+        hasControl = false;
+        player.DeactivateRb();
+
+        
+    }
+
+    public void StartGame()
+    {
+        chaser.StartChase();
+        hasControl = true;
+        player.ActivateRb();
     }
 
     void Update()
+    {
+        if (isStart)
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                isStart = false;
+                StartGame();
+            }
+        }
+        else
+        {
+            HandleInput();
+        }
+        
+    }
+
+
+    private void HandleInput()
     {
         bool isGrounded = player.isGrounded;
         if (hasControl)
@@ -70,21 +102,20 @@ public class PlayerController : MonoBehaviour
                     lastGoodPosition = player.pos;
                     testCube.position = lastGoodPosition;
                 }
-            
+
                 currentForce = impulseForceMin;
                 forceSlider.SetForce(currentForce);
-            } 
+            }
         }
-        
     }
 
     public void RespawnToNearPoint()
     {
         StartCoroutine(CooldownRoutine());
-        player.gameObject.transform.position = new Vector3(lastGoodPosition.x-spawnOffsetX, lastGoodPosition.y+spawnOffsetY, lastGoodPosition.z);
-        
+        player.gameObject.transform.position = new Vector3(lastGoodPosition.x - spawnOffsetX,
+            lastGoodPosition.y + spawnOffsetY, lastGoodPosition.z);
     }
-    
+
     private IEnumerator CooldownRoutine()
     {
         player.DeactivateRb();
