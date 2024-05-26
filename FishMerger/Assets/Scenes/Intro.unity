@@ -374,6 +374,31 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1815530976189984440, guid: be2db36773d0aa6469f4bb421617bffc, type: 3}
+      propertyPath: Phrases.Array.data[0]
+      value: The worst habit of mankind is to get caught in the nets of their own
+        prejudices, pride and sanctimony.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1815530976189984440, guid: be2db36773d0aa6469f4bb421617bffc, type: 3}
+      propertyPath: Phrases.Array.data[1]
+      value: And anyone who tries to get out of them ends up on the hook.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1815530976189984440, guid: be2db36773d0aa6469f4bb421617bffc, type: 3}
+      propertyPath: Phrases.Array.data[2]
+      value: What about the poor creatures that people catch to eat?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1815530976189984440, guid: be2db36773d0aa6469f4bb421617bffc, type: 3}
+      propertyPath: Phrases.Array.data[3]
+      value: But I am Amphitrite, ruler of the seas! I can save the poor fish.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1815530976189984440, guid: be2db36773d0aa6469f4bb421617bffc, type: 3}
+      propertyPath: Phrases.Array.data[4]
+      value: It's been that way for centuries. And it will be until the end of time.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1815530976189984440, guid: be2db36773d0aa6469f4bb421617bffc, type: 3}
+      propertyPath: Phrases.Array.data[5]
+      value: Don't get excited yet, fisherman!
+      objectReference: {fileID: 0}
     - target: {fileID: 4353563438396303264, guid: be2db36773d0aa6469f4bb421617bffc, type: 3}
       propertyPath: m_Name
       value: Canvas UI

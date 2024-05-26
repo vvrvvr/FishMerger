@@ -1333,41 +1333,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1065340148972393994, guid: e46fbc68a61729d4694325de380714bd, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1065340148972393994, guid: e46fbc68a61729d4694325de380714bd, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1065340148972393994, guid: e46fbc68a61729d4694325de380714bd, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1065340148972393994, guid: e46fbc68a61729d4694325de380714bd, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1065340148972393994, guid: e46fbc68a61729d4694325de380714bd, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1472640138658122084, guid: e46fbc68a61729d4694325de380714bd, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2925414386917432638, guid: e46fbc68a61729d4694325de380714bd, type: 3}
       propertyPath: m_Name
       value: Canvas UI
-      objectReference: {fileID: 0}
-    - target: {fileID: 4047751196161103914, guid: e46fbc68a61729d4694325de380714bd, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4047751196161103914, guid: e46fbc68a61729d4694325de380714bd, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
