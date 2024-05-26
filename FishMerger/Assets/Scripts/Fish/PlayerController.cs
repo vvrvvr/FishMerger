@@ -28,6 +28,10 @@ public class PlayerController : MonoBehaviour
     private bool isStart = true;
 
     public GameObject startTooltip;
+    public GameObject winCharacterPanel;
+    public GameObject NextLevelPanel;
+    public GameObject ButtonRestart;
+    public GameObject ForceSlider;
 
 
     private void Awake()
@@ -56,12 +60,17 @@ public class PlayerController : MonoBehaviour
         hasControl = true;
         player.ActivateRb();
         startTooltip.SetActive(false);
+        ForceSlider.SetActive(true);
+        ButtonRestart.SetActive(true);
     }
 
     public void WinGame()
     {
         player.gameObject.SetActive(false);
+        hasControl = false;
         Instantiate(MugilWin, player.transform.position, Quaternion.identity );
+        chaser.StopChase();
+        StartCoroutine(WinRoutine());
     }
 
     void Update()
@@ -134,10 +143,21 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(spawnCooldown);
         player.ActivateRb();
     }
+    private IEnumerator WinRoutine()
+    {
+        ButtonRestart.SetActive(false);
+        ForceSlider.SetActive(false);
+        yield return new WaitForSeconds(1f);
+        winCharacterPanel.SetActive(true);
+        yield return new WaitForSeconds(3f);
+        winCharacterPanel.SetActive(false);
+        NextLevelPanel.SetActive(true);
+    }
 
     public void CatchFish()
     {
         hasControl = false;
         player.DeactivateRb();
+        ForceSlider.SetActive(false);
     }
 }
