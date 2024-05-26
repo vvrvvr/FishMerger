@@ -32,6 +32,20 @@ public class Chaser : MonoBehaviour
     {
         currentSpeed = fishermanSpeed;
         wasBeyondMaxDistance = false;
+
+        isChasing = false;
+        animator.speed = 0;
+    }
+
+    public void StartChase()
+    {
+        animator.speed = 1;
+        isChasing = true;
+    }
+
+    public void StopChase()
+    {
+        isChasing = false;
     }
 
     void Update()

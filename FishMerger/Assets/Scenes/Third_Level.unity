@@ -9826,6 +9826,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1336221147945380950, guid: 229c107096dfaf54ba05c5551537ea30, type: 3}
+      propertyPath: chaser
+      value: 
+      objectReference: {fileID: 1358615500}
+    - target: {fileID: 1336221147945380950, guid: 229c107096dfaf54ba05c5551537ea30, type: 3}
       propertyPath: spawnOffsetX
       value: 1
       objectReference: {fileID: 0}
@@ -10674,6 +10678,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7829281031221457793, guid: 659e1f297b9004b4fb1f09326fbd5e4c, type: 3}
   m_PrefabInstance: {fileID: 1326063163}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1358615500 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7918927742370681292, guid: 229c107096dfaf54ba05c5551537ea30, type: 3}
+  m_PrefabInstance: {fileID: 1236542956}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4aa580ef105b8bf42a0f1472185cbe30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1365037896 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5777155373881978009, guid: 6eef9e580c001db45934a1ce61d95a7b, type: 3}
