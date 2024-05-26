@@ -117,7 +117,7 @@ public class Chaser : MonoBehaviour
                 isCatch = true;
             }
         }
-        else
+        else //здесь мы поймали рыбу
         {
             float moveDirection = Mathf.Sign(fish.position.x - transform.position.x);
             transform.position += new Vector3(-moveDirection * (0.7f - distanceToFish), 0f, 0f);
