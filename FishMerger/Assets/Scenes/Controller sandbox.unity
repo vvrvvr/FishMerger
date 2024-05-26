@@ -526,6 +526,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldown: 0.2
+  effect: {fileID: 0}
 --- !u!1 &1432354387
 GameObject:
   m_ObjectHideFlags: 0
