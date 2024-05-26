@@ -81,10 +81,10 @@ public class Chaser : MonoBehaviour
             transform.position = newPosition;
         }
         
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            CheckAndCatchFish();
-        }
+        // if (Input.GetKeyDown(KeyCode.L))
+        // {
+        //     CheckAndCatchFish();
+        // }
     }
 
     public void CheckAndCatchFish()

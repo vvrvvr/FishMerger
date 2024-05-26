@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     public Player player;
     public HealthBar forceSlider;
     public Chaser chaser;
+    public GameObject MugilWin;
     public bool hasControl = true;
 
     private float currentForce = 0f;
@@ -45,8 +46,6 @@ public class PlayerController : MonoBehaviour
 
         hasControl = false;
         player.DeactivateRb();
-
-        
     }
 
     public void StartGame()
@@ -56,8 +55,18 @@ public class PlayerController : MonoBehaviour
         player.ActivateRb();
     }
 
+    public void WinGame()
+    {
+        player.gameObject.SetActive(false);
+        Instantiate(MugilWin, player.transform.position, Quaternion.identity );
+    }
+
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            WinGame();
+        }
         if (isStart)
         {
             if (Input.GetKeyDown(KeyCode.Space))
