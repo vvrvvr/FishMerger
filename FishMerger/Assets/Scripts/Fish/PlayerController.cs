@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -32,6 +33,10 @@ public class PlayerController : MonoBehaviour
     public GameObject NextLevelPanel;
     public GameObject ButtonRestart;
     public GameObject ForceSlider;
+    public GameObject DeathCharacter;
+    public TextMeshProUGUI deathText;
+    public string[] deathPhrases = new string[3];
+   
 
 
     private void Awake()
@@ -159,5 +164,16 @@ public class PlayerController : MonoBehaviour
         hasControl = false;
         player.DeactivateRb();
         ForceSlider.SetActive(false);
+        StartCoroutine(DeathRoutine());
+    }
+    private IEnumerator DeathRoutine()
+    {
+        //ButtonRestart.SetActive(false);
+        ForceSlider.SetActive(false);
+        yield return new WaitForSeconds(0.5f);
+        int randomIndex = Random.Range(0, deathPhrases.Length);
+        deathText.text = deathPhrases[randomIndex];
+        DeathCharacter.SetActive(true);
+        
     }
 }

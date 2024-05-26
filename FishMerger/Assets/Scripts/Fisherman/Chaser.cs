@@ -26,6 +26,8 @@ public class Chaser : MonoBehaviour
     private bool isOnCooldown = false;
 
     private bool isCatch = false;
+
+    public GameObject deathEffect;
     
     
 
@@ -121,6 +123,7 @@ public class Chaser : MonoBehaviour
                 fishermanHand.CatchFish();
                 isChasing = false;
                 isCatch = true;
+                Instantiate(deathEffect, fish.position, fish.rotation);
             }
         }
         else //здесь мы поймали рыбу
@@ -136,6 +139,7 @@ public class Chaser : MonoBehaviour
             fishermanHand.CatchFish();
             isChasing = false;
             isCatch = true;
+            Instantiate(deathEffect, fish.position, fish.rotation);
         }
     }
 
