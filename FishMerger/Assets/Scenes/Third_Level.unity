@@ -11953,10 +11953,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1336221147945380950, guid: 229c107096dfaf54ba05c5551537ea30, type: 3}
-      propertyPath: impulseDirection.x
-      value: 0.8
-      objectReference: {fileID: 0}
     - target: {fileID: 1658186127495874131, guid: 229c107096dfaf54ba05c5551537ea30, type: 3}
       propertyPath: m_LocalPosition.x
       value: -32.19
@@ -12008,22 +12004,6 @@ PrefabInstance:
     - target: {fileID: 7396255682521089355, guid: 229c107096dfaf54ba05c5551537ea30, type: 3}
       propertyPath: m_Name
       value: Essentials (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7918927742370681292, guid: 229c107096dfaf54ba05c5551537ea30, type: 3}
-      propertyPath: fishermanSpeed
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7918927742370681292, guid: 229c107096dfaf54ba05c5551537ea30, type: 3}
-      propertyPath: fishermanMaxSpeed
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 7918927742370681292, guid: 229c107096dfaf54ba05c5551537ea30, type: 3}
-      propertyPath: maxDistanceToFish
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 7918927742370681292, guid: 229c107096dfaf54ba05c5551537ea30, type: 3}
-      propertyPath: safeDistanceToCatchFish
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

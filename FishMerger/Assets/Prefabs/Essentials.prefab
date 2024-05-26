@@ -1148,7 +1148,19 @@ PrefabInstance:
       objectReference: {fileID: 5961983889399444502}
     - target: {fileID: 5935974672427396546, guid: be7d5a4a32e35e745934c193f18faedc, type: 3}
       propertyPath: fishermanSpeed
-      value: 1.5
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5935974672427396546, guid: be7d5a4a32e35e745934c193f18faedc, type: 3}
+      propertyPath: fishermanMaxSpeed
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5935974672427396546, guid: be7d5a4a32e35e745934c193f18faedc, type: 3}
+      propertyPath: maxDistanceToFish
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5935974672427396546, guid: be7d5a4a32e35e745934c193f18faedc, type: 3}
+      propertyPath: safeDistanceToCatchFish
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7481573738266839219, guid: be7d5a4a32e35e745934c193f18faedc, type: 3}
       propertyPath: m_Name
@@ -1407,6 +1419,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1658186127495874131}
     m_Modifications:
+    - target: {fileID: 1485381000598214463, guid: 23113e8f17e7e2f40b3487d383ce3f57, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1750971067025544247, guid: 23113e8f17e7e2f40b3487d383ce3f57, type: 3}
       propertyPath: m_Name
       value: last place before Jump
@@ -1637,7 +1653,7 @@ PrefabInstance:
       objectReference: {fileID: 3383327666209010508}
     - target: {fileID: 8270935961775237540, guid: 89c43bc61e674f3419dda2c79e6b6924, type: 3}
       propertyPath: impulseDirection.x
-      value: 1
+      value: 0.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
